@@ -116,7 +116,7 @@ namespace SoftTeam.Control
             payment.dept = accounts[num].dept;
             DBA.InsertPayment(payment);
         }
-        public void SetPaymentListView(ListView ILV, int status = -1)
+        public void SetPaymentListView(ListView ILV, int status = -1,string dept="전체")
         {
             payments = DBA.SelectPayment();
             ILV.Items.Clear();
@@ -124,11 +124,13 @@ namespace SoftTeam.Control
 
             foreach (Payment i in payments)
             {
-                if (status !=-1)
-                    if (i.status!=status)
-                    {
+                if (status != -1)
+                    if (i.status != status)
                         continue;
-                    }
+                if (dept != "전체")
+                    if (dept != i.dept)
+                        continue;
+
                 ListViewItem item = new ListViewItem(i.no.ToString());
                 item.SubItems.Add(i.dept);
                 item.SubItems.Add(i.category);
@@ -161,19 +163,22 @@ namespace SoftTeam.Control
             usedLog.Dept = accounts[num].dept;
             DBA.InsertUsedLog(usedLog);
         }
-        public void SetUsedLogListView(ListView ULV, string category, string search = "")
+        public void SetUsedLogListView(ListView ULV, string category, string dept)
         {
-            usedLogs = DBA.SelectUsedLog(search);
+            usedLogs = DBA.SelectUsedLog();
             ULV.Items.Clear();
             ULV.View = View.Details;
 
             foreach (UsedLog i in usedLogs)
             {
-                if (category != "")
+                if (category != "전체")
                     if (i.Category.Trim() != category.Trim())
                     {
                         continue;
                     }
+                if (dept != "전체")
+                    if (dept != i.Dept)
+                        continue;
                 ListViewItem item = new ListViewItem(i.No.ToString());
                 item.SubItems.Add(i.Category);
                 item.SubItems.Add(i.ItemName);

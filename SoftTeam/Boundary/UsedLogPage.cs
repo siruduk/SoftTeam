@@ -14,18 +14,25 @@ namespace SoftTeam.Boundary
 
         private void UsedLogPage_Load(object sender, EventArgs e)
         {
-            IMP.SetUsedLogListView(UsedLogLV,CategoryCB.Text);
+            IMP.SetUsedLogListView(UsedLogLV, CategoryCB.Text, DeptCB.Text);
             IMP.SetCategoryComboBox(CategoryCB);
+            CategoryCB.SelectedIndex = 0;
+            DeptCB.SelectedIndex = 0;
         }
 
         private void searchBT_Click(object sender, EventArgs e)
         {
-            IMP.SetUsedLogListView(UsedLogLV,CategoryCB.Text,SearchTB.Text);
+            IMP.SetUsedLogListView(UsedLogLV,CategoryCB.Text,DeptCB.Text);
         }
 
         private void CategoryCB_SelectedValueChanged(object sender, EventArgs e)
         {
-            IMP.SetUsedLogListView(UsedLogLV, CategoryCB.Text, SearchTB.Text);
+            IMP.SetUsedLogListView(UsedLogLV, CategoryCB.Text, DeptCB.Text);
+        }
+
+        private void DeptCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IMP.SetUsedLogListView(UsedLogLV, CategoryCB.Text, DeptCB.Text);
         }
     }
 }

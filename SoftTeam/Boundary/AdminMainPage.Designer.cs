@@ -35,12 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UsedLogBT = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ItemManagementBT
             // 
-            this.ItemManagementBT.Location = new System.Drawing.Point(305, 104);
+            this.ItemManagementBT.Location = new System.Drawing.Point(305, 119);
             this.ItemManagementBT.Name = "ItemManagementBT";
             this.ItemManagementBT.Size = new System.Drawing.Size(137, 73);
             this.ItemManagementBT.TabIndex = 0;
@@ -50,7 +51,7 @@
             // EquipmentManamentBT
             // 
             this.EquipmentManamentBT.Enabled = false;
-            this.EquipmentManamentBT.Location = new System.Drawing.Point(450, 104);
+            this.EquipmentManamentBT.Location = new System.Drawing.Point(450, 119);
             this.EquipmentManamentBT.Name = "EquipmentManamentBT";
             this.EquipmentManamentBT.Size = new System.Drawing.Size(137, 73);
             this.EquipmentManamentBT.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // PaymentLogBT
             // 
-            this.PaymentLogBT.Location = new System.Drawing.Point(450, 195);
+            this.PaymentLogBT.Location = new System.Drawing.Point(450, 198);
             this.PaymentLogBT.Name = "PaymentLogBT";
             this.PaymentLogBT.Size = new System.Drawing.Size(137, 73);
             this.PaymentLogBT.TabIndex = 2;
@@ -69,7 +70,7 @@
             // 
             // PaymentManagementBT
             // 
-            this.PaymentManagementBT.Location = new System.Drawing.Point(305, 195);
+            this.PaymentManagementBT.Location = new System.Drawing.Point(305, 198);
             this.PaymentManagementBT.Name = "PaymentManagementBT";
             this.PaymentManagementBT.Size = new System.Drawing.Size(137, 73);
             this.PaymentManagementBT.TabIndex = 3;
@@ -89,7 +90,7 @@
             // 
             // UsedLogBT
             // 
-            this.UsedLogBT.Location = new System.Drawing.Point(377, 286);
+            this.UsedLogBT.Location = new System.Drawing.Point(450, 275);
             this.UsedLogBT.Name = "UsedLogBT";
             this.UsedLogBT.Size = new System.Drawing.Size(137, 73);
             this.UsedLogBT.TabIndex = 6;
@@ -105,11 +106,22 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(305, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 73);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "계정 승인";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // AdminMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 371);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.UsedLogBT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button UsedLogBT;
+        private System.Windows.Forms.Button button1;
     }
 }

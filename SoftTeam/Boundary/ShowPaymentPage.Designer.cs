@@ -36,9 +36,9 @@
             this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.단가 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.비고 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.결제상태 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DeptCB = new System.Windows.Forms.ComboBox();
             this.StatusCB = new System.Windows.Forms.ComboBox();
-            this.결제상태 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // PaymentLV
@@ -61,7 +61,6 @@
             this.PaymentLV.Size = new System.Drawing.Size(658, 362);
             this.PaymentLV.TabIndex = 1;
             this.PaymentLV.UseCompatibleStateImageBehavior = false;
-            this.PaymentLV.SelectedIndexChanged += new System.EventHandler(this.PaymentLV_SelectedIndexChanged);
             // 
             // No
             // 
@@ -97,6 +96,11 @@
             this.비고.Text = "비고";
             this.비고.Width = 70;
             // 
+            // 결제상태
+            // 
+            this.결제상태.Text = "결제상태";
+            this.결제상태.Width = 80;
+            // 
             // DeptCB
             // 
             this.DeptCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -110,8 +114,9 @@
             "전산팀"});
             this.DeptCB.Location = new System.Drawing.Point(12, 15);
             this.DeptCB.Name = "DeptCB";
-            this.DeptCB.Size = new System.Drawing.Size(228, 20);
+            this.DeptCB.Size = new System.Drawing.Size(160, 20);
             this.DeptCB.TabIndex = 9;
+            this.DeptCB.SelectedIndexChanged += new System.EventHandler(this.DeptCB_SelectedIndexChanged);
             // 
             // StatusCB
             // 
@@ -126,11 +131,7 @@
             this.StatusCB.Name = "StatusCB";
             this.StatusCB.Size = new System.Drawing.Size(92, 20);
             this.StatusCB.TabIndex = 10;
-            // 
-            // 결제상태
-            // 
-            this.결제상태.Text = "결제상태";
-            this.결제상태.Width = 80;
+            this.StatusCB.SelectedIndexChanged += new System.EventHandler(this.StatusCB_SelectedIndexChanged);
             // 
             // ShowPaymentPage
             // 

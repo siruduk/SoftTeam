@@ -1,0 +1,3 @@
+No;Date;Item;UsedAmount;Remark;Category
+1;2023-06-06 22:02:00;모나미 트리피스 볼펜 0.7mm 블랙;3;test;볼팬
+2;2023-06-06 22:53:46;모나미 트리피스 볼펜 0.7mm 레드;2;test;볼팬

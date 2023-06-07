@@ -196,6 +196,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="DB, UML\클래스 다이어그램 + 시퀀스 다이어그램.uml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -206,6 +207,13 @@
   <ItemGroup>
     <None Include="Resources\reload.png" />
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB, UML\category.txt" />
+    <Content Include="DB, UML\item.txt" />
+    <Content Include="DB, UML\Payment.txt" />
+    <Content Include="DB, UML\Table.txt" />
+    <Content Include="DB, UML\usedlog.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

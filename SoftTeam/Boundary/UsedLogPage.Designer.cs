@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.CategoryCB = new System.Windows.Forms.ComboBox();
-            this.SearchTB = new System.Windows.Forms.TextBox();
-            this.searchBT = new System.Windows.Forms.Button();
             this.UsedLogLV = new System.Windows.Forms.ListView();
             this.No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.카테고리 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,6 +39,7 @@
             this.소모부서 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.사유 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.날짜 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DeptCB = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CategoryCB
@@ -54,23 +53,6 @@
             this.CategoryCB.Size = new System.Drawing.Size(228, 20);
             this.CategoryCB.TabIndex = 9;
             this.CategoryCB.SelectedValueChanged += new System.EventHandler(this.CategoryCB_SelectedValueChanged);
-            // 
-            // SearchTB
-            // 
-            this.SearchTB.Location = new System.Drawing.Point(560, 22);
-            this.SearchTB.Name = "SearchTB";
-            this.SearchTB.Size = new System.Drawing.Size(163, 21);
-            this.SearchTB.TabIndex = 10;
-            // 
-            // searchBT
-            // 
-            this.searchBT.Image = global::SoftTeam.Properties.Resources.search;
-            this.searchBT.Location = new System.Drawing.Point(729, 22);
-            this.searchBT.Name = "searchBT";
-            this.searchBT.Size = new System.Drawing.Size(20, 20);
-            this.searchBT.TabIndex = 11;
-            this.searchBT.UseVisualStyleBackColor = true;
-            this.searchBT.Click += new System.EventHandler(this.searchBT_Click);
             // 
             // UsedLogLV
             // 
@@ -86,8 +68,8 @@
             this.UsedLogLV.FullRowSelect = true;
             this.UsedLogLV.HideSelection = false;
             this.UsedLogLV.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem3,
+            listViewItem4});
             this.UsedLogLV.Location = new System.Drawing.Point(12, 49);
             this.UsedLogLV.Name = "UsedLogLV";
             this.UsedLogLV.Size = new System.Drawing.Size(739, 339);
@@ -134,26 +116,39 @@
             this.날짜.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.날짜.Width = 150;
             // 
+            // DeptCB
+            // 
+            this.DeptCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DeptCB.FormattingEnabled = true;
+            this.DeptCB.Items.AddRange(new object[] {
+            "전체",
+            "기획팀",
+            "인사팀",
+            "총무팀",
+            "회계팀",
+            "전산팀"});
+            this.DeptCB.Location = new System.Drawing.Point(265, 23);
+            this.DeptCB.Name = "DeptCB";
+            this.DeptCB.Size = new System.Drawing.Size(160, 20);
+            this.DeptCB.TabIndex = 19;
+            this.DeptCB.SelectedIndexChanged += new System.EventHandler(this.DeptCB_SelectedIndexChanged);
+            // 
             // UsedLogPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 408);
+            this.Controls.Add(this.DeptCB);
             this.Controls.Add(this.UsedLogLV);
-            this.Controls.Add(this.searchBT);
-            this.Controls.Add(this.SearchTB);
             this.Controls.Add(this.CategoryCB);
             this.Name = "UsedLogPage";
             this.Load += new System.EventHandler(this.UsedLogPage_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.ComboBox CategoryCB;
-        private System.Windows.Forms.TextBox SearchTB;
-        private System.Windows.Forms.Button searchBT;
         public System.Windows.Forms.ListView UsedLogLV;
         private System.Windows.Forms.ColumnHeader 카테고리;
         private System.Windows.Forms.ColumnHeader 품목명;
@@ -162,5 +157,6 @@
         private System.Windows.Forms.ColumnHeader 사유;
         private System.Windows.Forms.ColumnHeader No;
         private System.Windows.Forms.ColumnHeader 소모부서;
+        private System.Windows.Forms.ComboBox DeptCB;
     }
 }

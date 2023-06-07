@@ -151,7 +151,7 @@ namespace SoftTeam.Control
                 return false;
             }
         }
-        public List<UsedLog> SelectUsedLog(string Search)
+        public List<UsedLog> SelectUsedLog()
         {
             List<UsedLog> list = new List<UsedLog>();
             try
@@ -159,7 +159,7 @@ namespace SoftTeam.Control
                 using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
                 {
                     mysql.Open();
-                    string selectQuery = string.Format("SELECT * FROM UsedLog where item like '%{0}%'", Search);
+                    string selectQuery = string.Format("SELECT * FROM UsedLog;");
 
                     MySqlCommand command = new MySqlCommand(selectQuery, mysql);
                     MySqlDataReader table = command.ExecuteReader();
