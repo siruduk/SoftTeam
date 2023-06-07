@@ -9,7 +9,6 @@ namespace SoftTeam
 {
     internal static class Program
     {
-        public static string Id { get; set; }
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>

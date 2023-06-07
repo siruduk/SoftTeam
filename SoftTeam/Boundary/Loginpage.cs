@@ -15,7 +15,6 @@ namespace SoftTeam.Boundary
         {
             UserMainPage UMP = new UserMainPage();
             UMP.ShowDialog();
-            Program.Id = IdTB.Text;
             Close();
         }
 
@@ -23,7 +22,6 @@ namespace SoftTeam.Boundary
         {
             AdminMainPage AMP = new AdminMainPage();
             AMP.ShowDialog();
-            Program.Id = IdTB.Text;
             Close();
         }
 

@@ -63,7 +63,7 @@
             // 
             // searchBT
             // 
-            this.searchBT.Image = global::WindowsFormsApp1.Properties.Resources.search;
+            this.searchBT.Image = global::SoftTeam.Properties.Resources.search;
             this.searchBT.Location = new System.Drawing.Point(729, 22);
             this.searchBT.Name = "searchBT";
             this.searchBT.Size = new System.Drawing.Size(20, 20);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Entity
+namespace SoftTeam.Entity
 {
     internal class Payment
     {

@@ -202,7 +202,7 @@
             // 
             // ReloadBT
             // 
-            this.ReloadBT.Image = global::WindowsFormsApp1.Properties.Resources.reload;
+            this.ReloadBT.Image = global::SoftTeam.Properties.Resources.reload;
             this.ReloadBT.Location = new System.Drawing.Point(6, 12);
             this.ReloadBT.Name = "ReloadBT";
             this.ReloadBT.Size = new System.Drawing.Size(23, 23);

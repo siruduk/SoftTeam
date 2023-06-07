@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9DC45438-89DB-470C-B205-B79E758AC2F5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>SoftTeam</RootNamespace>
+    <AssemblyName>SoftTeam</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -111,6 +111,7 @@
     <Compile Include="Boundary\PaymentPage.Designer.cs">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Account.cs" />
     <Compile Include="Control\DataBaseAccess.cs" />
     <Compile Include="Boundary\ItemAddPage.cs">
       <SubType>Form</SubType>

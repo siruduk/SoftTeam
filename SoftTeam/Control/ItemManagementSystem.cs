@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using SoftTeam.Boundary;
 using SoftTeam.Entity;
-using WindowsFormsApp1.Entity;
 
 namespace SoftTeam.Control
 {
@@ -18,6 +17,8 @@ namespace SoftTeam.Control
         List<UsedLog> usedLogs;
         Payment payment = new Payment();
         List<Payment> payments;
+        Account acount=new Account();
+        List<Account> Accounts;
 
         public void AddItem(ItemAddPage IAP)
         {
@@ -114,6 +115,10 @@ namespace SoftTeam.Control
 
                 ULV.Items.Add(item);
             }
+        }
+        public void SetTestAccount()
+        {
+
         }
     }
 }

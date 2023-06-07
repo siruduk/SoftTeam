@@ -4,7 +4,6 @@ using MySql.Data.MySqlClient;
 using System.Collections;
 using System.Collections.Generic;
 using SoftTeam.Entity;
-using WindowsFormsApp1.Entity;
 
 namespace SoftTeam.Control
 {
@@ -196,7 +195,23 @@ namespace SoftTeam.Control
         }
         public void UpdatePayment(int no,int status)
         {
-
+            try
+            {
+                using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
+                {
+                    mysql.Open();
+                    string updateQuery = string.Format("UPDATE Payment SET Status = {0} WHERE No = {0};", status, no);
+                    MySqlCommand command = new MySqlCommand(updateQuery, mysql);
+                    if (command.ExecuteNonQuery() != 1)
+                    {
+                        MessageBox.Show("Failed to update data.");
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
         public void InsertPayment(Payment payment)
         {
