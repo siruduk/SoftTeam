@@ -45,10 +45,23 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.부서 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.카테고리 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.품목명 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.총액 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.비고 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.부서,
+            this.카테고리,
+            this.품목명,
+            this.수량,
+            this.총액,
+            this.비고});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 76);
             this.listView1.Name = "listView1";
@@ -131,11 +144,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(434, 306);
+            this.label5.Location = new System.Drawing.Point(422, 306);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 10;
-            this.label5.Text = "요청자";
+            this.label5.Text = "요청부서";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox5
@@ -200,6 +213,30 @@
             this.button2.Text = "반려";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // 부서
+            // 
+            this.부서.Text = "부서";
+            // 
+            // 카테고리
+            // 
+            this.카테고리.Text = "카테고리";
+            // 
+            // 품목명
+            // 
+            this.품목명.Text = "품목명";
+            // 
+            // 수량
+            // 
+            this.수량.Text = "수량";
+            // 
+            // 총액
+            // 
+            this.총액.Text = "총액";
+            // 
+            // 비고
+            // 
+            this.비고.Text = "비고";
+            // 
             // PaymentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -249,5 +286,11 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ColumnHeader 부서;
+        private System.Windows.Forms.ColumnHeader 카테고리;
+        private System.Windows.Forms.ColumnHeader 품목명;
+        private System.Windows.Forms.ColumnHeader 수량;
+        private System.Windows.Forms.ColumnHeader 총액;
+        private System.Windows.Forms.ColumnHeader 비고;
     }
 }

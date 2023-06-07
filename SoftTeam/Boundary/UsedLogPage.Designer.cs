@@ -40,6 +40,7 @@
             this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.사유 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.날짜 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.소모부서 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // CategoryCB
@@ -79,6 +80,7 @@
             this.카테고리,
             this.품목명,
             this.수량,
+            this.소모부서,
             this.사유,
             this.날짜});
             this.UsedLogLV.FullRowSelect = true;
@@ -127,6 +129,10 @@
             this.날짜.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.날짜.Width = 150;
             // 
+            // 소모부서
+            // 
+            this.소모부서.Text = "소모 부서";
+            // 
             // UsedLogPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -154,5 +160,6 @@
         private System.Windows.Forms.ColumnHeader 수량;
         private System.Windows.Forms.ColumnHeader 사유;
         private System.Windows.Forms.ColumnHeader No;
+        private System.Windows.Forms.ColumnHeader 소모부서;
     }
 }

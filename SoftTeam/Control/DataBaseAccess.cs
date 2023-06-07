@@ -155,6 +155,7 @@ namespace SoftTeam.Control
                         usedLog.ItemName = table["item"].ToString();
                         usedLog.UsedAmount = int.Parse(table["UsedAmount"].ToString());
                         usedLog.Remark = table["Remark"].ToString();
+                        usedLog.Dept = table["Dept"].ToString();
                         list.Add(usedLog);
                     }
                     table.Close();
@@ -174,8 +175,8 @@ namespace SoftTeam.Control
                 using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
                 {
                     mysql.Open();
-                    string insertQuery = string.Format("INSERT INTO usedlog (Category, Item, UsedAmount, Remark) VALUES ('{0}', '{1}', '{2}', '{3}');",
-                        usedLog.Category, usedLog.ItemName, usedLog.UsedAmount, usedLog.Remark);
+                    string insertQuery = string.Format("INSERT INTO usedlog (Category, Item, UsedAmount, Remark, Dept) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');",
+                        usedLog.Category, usedLog.ItemName, usedLog.UsedAmount, usedLog.Remark, usedLog.Dept);
 
                     MySqlCommand command = new MySqlCommand(insertQuery, mysql);
                     if (command.ExecuteNonQuery() != 1)

@@ -13,6 +13,7 @@ namespace SoftTeam.Entity
         public string ItemName { get; set; }
         public string Category { get; set; }
         public string Remark { get; set; }
+        public string Dept { get; set; }
         public int UsedAmount { get; set; }
     }
 }

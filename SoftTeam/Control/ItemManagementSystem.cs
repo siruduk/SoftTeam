@@ -17,8 +17,8 @@ namespace SoftTeam.Control
         List<UsedLog> usedLogs;
         Payment payment = new Payment();
         List<Payment> payments;
-        Account acount=new Account();
-        List<Account> Accounts;
+        Account account=new Account();
+        List<Account> accounts;
 
         public void AddItem(ItemAddPage IAP)
         {
@@ -78,19 +78,26 @@ namespace SoftTeam.Control
         }
         public void RequirePayment(ListViewItem i, int n, string remark)
         {
+            Random rand = new Random();
+            int num = rand.Next(0, 10);
+
             payment.category = i.SubItems[0].Text;
             payment.name = i.SubItems[1].Text;
             payment.price = int.Parse(i.SubItems[2].Text);
             payment.remark = remark;
             payment.requirmentAmount = n;
+            payment.dept = accounts[num].dept;
             DBA.InsertPayment(payment);
         }
         public void InsertUsedLog(ListViewItem i, int n, string remark)
         {
+            Random rand = new Random();
+            int num = rand.Next(0,10);
             usedLog.Category = i.SubItems[0].Text;
             usedLog.ItemName = i.SubItems[1].Text; 
             usedLog.Remark = remark; 
             usedLog.UsedAmount = n;
+            usedLog.Dept = accounts[num].dept;
             DBA.InsertUsedLog(usedLog);
         }
         public void SetUsedLogListView(ListView ULV, string category, string search = "")
@@ -118,7 +125,20 @@ namespace SoftTeam.Control
         }
         public void SetTestAccount()
         {
+            List<string> depts= new List<string>();
+            depts.Add("기획팀");
+            depts.Add("인사팀");
+            depts.Add("총무팀");
+            depts.Add("회계팀");
+            depts.Add("전산팀");
 
-        }
+            for (int i=0;i<10;i++)
+            {
+                account.id = "Test" + (i+1);
+                account.dept = depts[i % 5];
+                account.pw = 1234;
+                accounts.Add(account);
+            }
+        } // 계정 관련 기능을 구현하지 않아 테스트용 계정정보 생성 및 저장
     }
 }

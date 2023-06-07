@@ -24,19 +24,5 @@ namespace SoftTeam.Boundary
             AMP.ShowDialog();
             Close();
         }
-
-        private void TextChanged(object sender, EventArgs e)
-        {
-            if (IdTB.Text.Length > 0 && IdTB.Text.Length > 0)
-            {
-                UserBT.Enabled = true;
-                AdminBT.Enabled = true;
-            }
-            else
-            {
-                UserBT.Enabled = false;
-                AdminBT.Enabled = false;
-            }
-        }
     }
 }

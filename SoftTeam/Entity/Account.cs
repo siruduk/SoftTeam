@@ -10,5 +10,6 @@ namespace SoftTeam.Entity
     {
         public string id { get; set; }
         public string dept { get; set; }
+        public int pw { get; set; }
     }
 }
