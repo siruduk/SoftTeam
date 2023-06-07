@@ -65,6 +65,7 @@
             this.PaymentLogBT.TabIndex = 2;
             this.PaymentLogBT.Text = "결제 기록 확인";
             this.PaymentLogBT.UseVisualStyleBackColor = true;
+            this.PaymentLogBT.Click += new System.EventHandler(this.PaymentLogBT_Click);
             // 
             // PaymentManagementBT
             // 
@@ -74,6 +75,7 @@
             this.PaymentManagementBT.TabIndex = 3;
             this.PaymentManagementBT.Text = "결제 처리";
             this.PaymentManagementBT.UseVisualStyleBackColor = true;
+            this.PaymentManagementBT.Click += new System.EventHandler(this.PaymentManagementBT_Click);
             // 
             // label1
             // 

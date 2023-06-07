@@ -30,7 +30,7 @@ namespace SoftTeam.Control
                         Item item = new Item();
                         item.Category = table["Category"].ToString();
                         item.Name = table["Name"].ToString();
-                        item.Standard = table["Standard"].ToString();
+                        item.Remark = table["Remark"].ToString();
                         item.Price = int.Parse(table["Price"].ToString());
                         item.Amount = int.Parse(table["Amount"].ToString());
                         items.Add(item);
@@ -51,7 +51,7 @@ namespace SoftTeam.Control
                 using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
                 {
                     mysql.Open();
-                    string insertQuery = string.Format("INSERT INTO item (Category, Name, Standard, Price, Amount) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", i.Category,i.Name,i.Standard,i.Price,i.Amount);
+                    string insertQuery = string.Format("INSERT INTO item (Category, Name, Remark, Price, Amount) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');", i.Category,i.Name,i.Remark,i.Price,i.Amount);
                     MySqlCommand command = new MySqlCommand(insertQuery, mysql);
                     if (command.ExecuteNonQuery() != 1)
                         MessageBox.Show("Failed to insert data.");
@@ -88,6 +88,25 @@ namespace SoftTeam.Control
                 MessageBox.Show(exc.Message);
             }
             return category;
+        }
+        public void InsertCategory(string category) 
+        {
+            try
+            {
+                using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
+                {
+                    mysql.Open();
+                    string insertQuery = string.Format("INSERT INTO Categorys (Category) VALUES ('{0}');", category);
+
+                    MySqlCommand command = new MySqlCommand(insertQuery, mysql);
+                    if (command.ExecuteNonQuery() != 1)
+                        MessageBox.Show("Failed to insert data.");
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
         public void DelItem(Item i)
         {
@@ -191,8 +210,40 @@ namespace SoftTeam.Control
         public List<Payment> SelectPayment()
         {
             List<Payment> list = new List<Payment>();
+            try
+            {
+                using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
+                {
+                    mysql.Open();
+                    string selectQuery = string.Format("SELECT * FROM payment");
 
-            return list;
+                    MySqlCommand command = new MySqlCommand(selectQuery, mysql);
+                    MySqlDataReader table = command.ExecuteReader();
+
+
+                    while (table.Read())
+                    {
+                        Payment payment = new Payment();
+                        payment.category = table["Category"].ToString();
+                        payment.no = int.Parse(table["No"].ToString());
+                        payment.date = table["Date"].ToString();
+                        payment.name = table["name"].ToString();
+                        payment.requirmentAmount = int.Parse(table["requirmentAmount"].ToString());
+                        payment.remark = table["Remark"].ToString();
+                        payment.dept = table["Dept"].ToString();
+                        payment.price = int.Parse(table["price"].ToString());
+                        payment.status = int.Parse(table["status"].ToString());
+                        list.Add(payment);
+                    }
+                    table.Close();
+                }
+                return list;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return list;
+            }
         }
         public void UpdatePayment(int no,int status)
         {
@@ -201,7 +252,7 @@ namespace SoftTeam.Control
                 using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
                 {
                     mysql.Open();
-                    string updateQuery = string.Format("UPDATE Payment SET Status = {0} WHERE No = {0};", status, no);
+                    string updateQuery = string.Format("UPDATE Payment SET Status = {0} WHERE No = {1};", status, no);
                     MySqlCommand command = new MySqlCommand(updateQuery, mysql);
                     if (command.ExecuteNonQuery() != 1)
                     {
@@ -221,8 +272,8 @@ namespace SoftTeam.Control
                 using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
                 {
                     mysql.Open();
-                    string insertQuery = string.Format("INSERT INTO Payment (Category, Name, requirmentAmount, Remark, Price, id) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', 'test');",
-                        payment.category, payment.name, payment.requirmentAmount, payment.remark,payment.price);
+                    string insertQuery = string.Format("INSERT INTO Payment (Category, Name, requirmentAmount, Remark, Price, dept) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
+                        payment.category, payment.name, payment.requirmentAmount, payment.remark, payment.price, payment.dept);
 
                     MySqlCommand command = new MySqlCommand(insertQuery, mysql);
                     if (command.ExecuteNonQuery() != 1)

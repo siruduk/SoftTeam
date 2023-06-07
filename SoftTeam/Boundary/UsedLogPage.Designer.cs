@@ -38,9 +38,9 @@
             this.카테고리 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.품목명 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.소모부서 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.사유 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.날짜 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.소모부서 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // CategoryCB
@@ -117,6 +117,11 @@
             this.수량.Text = "수량";
             this.수량.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // 소모부서
+            // 
+            this.소모부서.Text = "소모 부서";
+            this.소모부서.Width = 65;
+            // 
             // 사유
             // 
             this.사유.Text = "사유";
@@ -128,10 +133,6 @@
             this.날짜.Text = "날짜";
             this.날짜.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.날짜.Width = 150;
-            // 
-            // 소모부서
-            // 
-            this.소모부서.Text = "소모 부서";
             // 
             // UsedLogPage
             // 

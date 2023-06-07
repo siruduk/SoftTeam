@@ -34,7 +34,6 @@
             // 
             // UserBT
             // 
-            this.UserBT.Enabled = false;
             this.UserBT.Location = new System.Drawing.Point(12, 12);
             this.UserBT.Name = "UserBT";
             this.UserBT.Size = new System.Drawing.Size(120, 40);
@@ -45,7 +44,6 @@
             // 
             // AdminBT
             // 
-            this.AdminBT.Enabled = false;
             this.AdminBT.Location = new System.Drawing.Point(152, 12);
             this.AdminBT.Name = "AdminBT";
             this.AdminBT.Size = new System.Drawing.Size(120, 40);

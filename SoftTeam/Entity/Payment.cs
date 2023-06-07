@@ -13,6 +13,7 @@ namespace SoftTeam.Entity
         public string name { set; get; }
         public string remark { set; get; }
         public string date { set; get; }
+        public string dept { get; set; }
         public int price { set; get; }
         public int status { set; get; }
         public int requirmentAmount { set; get; }

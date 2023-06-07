@@ -22,5 +22,11 @@ namespace SoftTeam.Boundary
             UsedLogPage ULP = new UsedLogPage();
             ULP.ShowDialog();
         }
+
+        private void PaymentManagementBT_Click(object sender, EventArgs e)
+        {
+            ShowPaymentPage PP = new ShowPaymentPage();
+            PP.ShowDialog();
+        }
     }
 }

@@ -87,11 +87,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boundary\AddCategoryPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\AddCategoryPage.Designer.cs">
+      <DependentUpon>AddCategoryPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boundary\Loginpage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Boundary\Loginpage.designer.cs">
       <DependentUpon>Loginpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary\ShowPaymentPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\ShowPaymentPage.Designer.cs">
+      <DependentUpon>ShowPaymentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Boundary\UsedLogPage.cs">
       <SubType>Form</SubType>
@@ -137,8 +149,14 @@
     <Compile Include="Entity\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Boundary\AddCategoryPage.resx">
+      <DependentUpon>AddCategoryPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boundary\Loginpage.resx">
       <DependentUpon>Loginpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\ShowPaymentPage.resx">
+      <DependentUpon>ShowPaymentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\UsedLogPage.resx">
       <DependentUpon>UsedLogPage.cs</DependentUpon>

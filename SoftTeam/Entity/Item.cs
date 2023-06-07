@@ -10,7 +10,7 @@ namespace SoftTeam.Entity
     {
         public string Category { get; set; }
         public string Name { get; set; }
-        public string Standard { get; set; }
+        public string Remark { get; set; }
         public int Price { get; set; }
         public int Amount { get; set; }
     }

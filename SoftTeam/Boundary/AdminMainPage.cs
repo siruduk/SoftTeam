@@ -21,7 +21,19 @@ namespace SoftTeam.Boundary
         private void ItemManagementBT_Click(object sender, EventArgs e)
         {
             ItemManagementPage IMP = new ItemManagementPage();
-            IMP.Show();
+            IMP.ShowDialog();
+        }
+
+        private void PaymentManagementBT_Click(object sender, EventArgs e)
+        {
+            PaymentPage PP = new PaymentPage();
+            PP.ShowDialog();
+        }
+
+        private void PaymentLogBT_Click(object sender, EventArgs e)
+        {
+            ShowPaymentPage PP = new ShowPaymentPage();
+            PP.ShowDialog();
         }
     }
 }

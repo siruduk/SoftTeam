@@ -32,8 +32,8 @@
             this.PaymentManagementBT = new System.Windows.Forms.Button();
             this.EquipmentManagementBT = new System.Windows.Forms.Button();
             this.ItemManagementBT = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             this.PaymentManagementBT.TabIndex = 10;
             this.PaymentManagementBT.Text = "결제 기록 확인";
             this.PaymentManagementBT.UseVisualStyleBackColor = true;
+            this.PaymentManagementBT.Click += new System.EventHandler(this.PaymentManagementBT_Click);
             // 
             // EquipmentManagementBT
             // 
@@ -76,14 +77,6 @@
             this.ItemManagementBT.UseVisualStyleBackColor = true;
             this.ItemManagementBT.Click += new System.EventHandler(this.ItemManagementBT_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 275);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -93,6 +86,14 @@
             this.label1.Size = new System.Drawing.Size(93, 27);
             this.label1.TabIndex = 14;
             this.label1.Text = "사용자";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 275);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // UserMainPage
             // 

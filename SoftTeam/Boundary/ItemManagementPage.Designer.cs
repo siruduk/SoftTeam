@@ -72,8 +72,6 @@
             // 
             this.CategoryCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryCB.FormattingEnabled = true;
-            this.CategoryCB.Items.AddRange(new object[] {
-            "전체"});
             this.CategoryCB.Location = new System.Drawing.Point(32, 13);
             this.CategoryCB.Name = "CategoryCB";
             this.CategoryCB.Size = new System.Drawing.Size(228, 20);
@@ -163,6 +161,7 @@
             this.비고});
             this.ItemLV.FullRowSelect = true;
             this.ItemLV.HideSelection = false;
+            this.ItemLV.LabelWrap = false;
             this.ItemLV.Location = new System.Drawing.Point(-1, 39);
             this.ItemLV.MultiSelect = false;
             this.ItemLV.Name = "ItemLV";

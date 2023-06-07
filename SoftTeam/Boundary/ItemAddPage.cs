@@ -13,17 +13,20 @@ namespace SoftTeam.Boundary
         public ItemAddPage()
         {
             InitializeComponent();
-            SaveButton.Enabled = false;
+            SaveBT.Enabled = false;
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+        private void SaveBT_Click(object sender, EventArgs e)
         {
             IMS.AddItem(this);
+            MessageBox.Show("추가되었습니다.");
+            Close();
         }
 
         private void ItemAddPage_Load(object sender, EventArgs e)
         {
             IMS.SetCategoryComboBox(CategoryCB);
+            CategoryCB.SelectedIndex = 0;
         }
 
         private void KeyPress(object sender, KeyPressEventArgs e)
@@ -36,10 +39,34 @@ namespace SoftTeam.Boundary
 
         private void TextChanged(object sender, EventArgs e)
         {
-            if (CategoryCB.Text.Length > 0 && NameTB.Text.Length > 0 && StandardTB.Text.Length > 0 && AmountTB.Text.Length > 0 && PriceTB.Text.Length > 0)
-                SaveButton.Enabled = true;
+            if (CategoryCB.Text.Length > 0 && NameTB.Text.Length > 0 && RemarkTB.Text.Length > 0 && AmountTB.Text.Length > 0 && PriceTB.Text.Length > 0)
+            {
+                CheckBT.Enabled = true;
+                SaveBT.Enabled = false;
+            }
+            else
+            {
+                SaveBT.Enabled = false;
+                CheckBT.Enabled = false;
+            }
+        }
+
+        private void AddCategoryBT_Click(object sender, EventArgs e)
+        {
+            AddCategoryPage ACP = new AddCategoryPage();
+            ACP.ShowDialog();
+        }
+
+        private void CheckBT_Click(object sender, EventArgs e)
+        {
+            if (IMS.CheckItem(CategoryCB.Text, NameTB.Text))
+            {
+                SaveBT.Enabled = true;
+                MessageBox.Show("추가 가능한 품목입니다.");
+            }
             else 
-                SaveButton.Enabled=false;
+                MessageBox.Show("이미 있는 품목입니다.");
+
         }
     }
 }
