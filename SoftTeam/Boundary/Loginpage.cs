@@ -15,14 +15,12 @@ namespace SoftTeam.Boundary
         {
             UserMainPage UMP = new UserMainPage();
             UMP.ShowDialog();
-            Close();
         }
 
         private void AdminBT_Click(object sender, EventArgs e)
         {
             AdminMainPage AMP = new AdminMainPage();
             AMP.ShowDialog();
-            Close();
         }
     }
 }

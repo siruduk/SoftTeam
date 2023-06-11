@@ -95,6 +95,8 @@ namespace SoftTeam.Boundary
                 ListViewItem selectedItem = ItemLV.SelectedItems[0];
 
                 NameTB.Text = selectedItem.SubItems[1].Text;
+                AmountTB.Text = "";
+                RemarkTB.Text = "";
                 DelBT.Enabled = true;
             }
         }
