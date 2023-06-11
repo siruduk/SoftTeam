@@ -53,6 +53,7 @@
             // 
             // CheckBT
             // 
+            this.CheckBT.Enabled = false;
             this.CheckBT.Location = new System.Drawing.Point(14, 66);
             this.CheckBT.Name = "CheckBT";
             this.CheckBT.Size = new System.Drawing.Size(76, 30);
@@ -72,7 +73,7 @@
             this.AddBT.UseVisualStyleBackColor = true;
             this.AddBT.Click += new System.EventHandler(this.AddBT_Click);
             // 
-            // AddCategory
+            // AddCategoryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -81,7 +82,7 @@
             this.Controls.Add(this.CheckBT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CategoryTB);
-            this.Name = "AddCategory";
+            this.Name = "AddCategoryPage";
             this.Text = "AddCategory";
             this.ResumeLayout(false);
             this.PerformLayout();

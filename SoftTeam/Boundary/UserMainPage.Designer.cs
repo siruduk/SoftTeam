@@ -89,10 +89,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 84);
+            this.pictureBox1.Image = global::SoftTeam.Properties.Resources.aa;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 77);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 275);
-            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // UserMainPage
@@ -100,8 +101,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 371);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.UsedLogBT);
             this.Controls.Add(this.PaymentManagementBT);
             this.Controls.Add(this.EquipmentManagementBT);
@@ -120,7 +121,7 @@
         private System.Windows.Forms.Button PaymentManagementBT;
         private System.Windows.Forms.Button EquipmentManagementBT;
         private System.Windows.Forms.Button ItemManagementBT;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

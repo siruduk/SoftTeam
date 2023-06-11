@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using SoftTeam.Control;
-using SoftTeam.Boundary;
 
 namespace SoftTeam.Boundary
 {
@@ -102,6 +101,13 @@ namespace SoftTeam.Boundary
         }
         private void CategoryCB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            NameTB.Text = "";
+            AmountTB.Text = "";
+            RemarkTB.Text = "";
+            DelBT.Enabled = false;
+            UsedBT.Enabled = false;
+            RequireBT.Enabled = false;
+
             IMS.SetItemListView(ItemLV, CategoryCB.Text);
         }
         private void AmountTB_TextChanged(object sender, EventArgs e)
