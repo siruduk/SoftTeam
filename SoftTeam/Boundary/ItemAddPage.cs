@@ -55,8 +55,6 @@ namespace SoftTeam.Boundary
         {
             AddCategoryPage ACP = new AddCategoryPage();
             ACP.ShowDialog();
-            IMS.SetCategoryComboBox(CategoryCB);
-            CategoryCB.SelectedIndex = 0;
         }
 
         private void CheckBT_Click(object sender, EventArgs e)

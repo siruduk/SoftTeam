@@ -29,17 +29,13 @@ namespace SoftTeam.Boundary
             {             
                 CheckBT.Enabled = false; 
             }
-            AddBT.Enabled = false;
         }
 
         private void CheckBT_Click(object sender, EventArgs e)
         {
-            if (IMS.CheckCategory(CategoryTB.Text))
-            {
-                MessageBox.Show("사용 가능한 카테고리 입니다.");
+            if(IMS.CheckCategory(CategoryTB.Text))
                 AddBT.Enabled = true;
-            }
-            else
+            else 
             {
                 MessageBox.Show("이미 있는 카테고리 입니다.");
                 AddBT.Enabled = false;

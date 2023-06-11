@@ -201,11 +201,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reload.png" />
-    <None Include="Resources\search.png" />
+    <None Include="Resources\제목_없음-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\aa.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

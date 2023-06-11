@@ -106,11 +106,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(314, 341);
+            this.label1.Location = new System.Drawing.Point(293, 343);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 12;
-            this.label1.Text = "수량";
+            this.label1.Text = "추가/소모";
             // 
             // label2
             // 

@@ -34,8 +34,8 @@
             this.PaymentManagementBT = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.UsedLogBT = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +98,14 @@
             this.UsedLogBT.UseVisualStyleBackColor = true;
             this.UsedLogBT.Click += new System.EventHandler(this.UsedLogBT_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 275);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // button1
             // 
             this.button1.Enabled = false;
@@ -107,15 +115,6 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "계정 승인";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SoftTeam.Properties.Resources.aa;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 256);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // AdminMainPage
             // 
