@@ -12961,6 +12961,19 @@
 <XPD:REF name="Views[2]">CKSuGI3vd0+okyU6TVl5YAAA</XPD:REF>
 <XPD:REF name="Views[3]">HkHIigSaVkOhcIFMII9svAAA</XPD:REF>
 </XPD:OBJ>
+<XPD:OBJ name="ParticipatingStimuli[5]" type="UMLStimulus" guid="fDJaGHF5ZUCF73uf47E95gAA">
+<XPD:REF name="Sender">3QXm6TlNoEiuQlDGa2Rh9gAA</XPD:REF>
+<XPD:REF name="Receiver">gIwZnokjqEaDYQBg1v+oxwAA</XPD:REF>
+<XPD:OBJ name="Action" type="UMLCallAction" guid="pQ8h8R1pqkq2iWHM1h7DJgAA">
+<XPD:REF name="Stimulus">fDJaGHF5ZUCF73uf47E95gAA</XPD:REF>
+</XPD:OBJ>
+<XPD:REF name="InteractionInstanceSet">wFQ8UOMaqE+4E5cOVmMZ0gAA</XPD:REF>
+<XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
+<XPD:REF name="Views[0]">8XUPh8SpTUGCrXvy3dwNQQAA</XPD:REF>
+<XPD:REF name="Views[1]">pL5ivBEHu0KFpDM3F5HlAgAA</XPD:REF>
+<XPD:REF name="Views[2]">zIHsMhtmOUSbir93ACi4sQAA</XPD:REF>
+<XPD:REF name="Views[3]">+QYZDKyYiUunKC6vMXEm2QAA</XPD:REF>
+</XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#ParticipatingInstances" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="ParticipatingInstances[0]" type="UMLObject" guid="GsNl9skRTUaAR7FoEZUObAAA">
